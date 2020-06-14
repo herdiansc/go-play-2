@@ -1,1 +1,1 @@
-web: ./go-play-2
+web: ./bin/go-play-2
