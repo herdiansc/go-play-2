@@ -57,5 +57,17 @@ func main() {
             Data: nil,
         })
     })
+
+    http.HandleFunc("/orders/reset", func(w http.ResponseWriter, req *http.Request) {
+        initialStock = 2
+        
+        w.Header().Set("Content-Type", "application/json")
+        w.WriteHeader(http.StatusOK)
+        json.NewEncoder(w).Encode(BaseResponse{
+            Status: "success",
+            Message: "You can access order endpoint again at GET /orders",
+            Data: nil,
+        })
+    })
     http.ListenAndServe(port, nil)
 }
