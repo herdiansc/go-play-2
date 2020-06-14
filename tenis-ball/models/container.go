@@ -8,9 +8,6 @@ import (
 )
 
 // Containers contains balls.
-// assumptions:
-// - there are 10 container
-// - a container is full when it contains 3 balls
 type Containers map[int]int
 
 // Length returns total of container.

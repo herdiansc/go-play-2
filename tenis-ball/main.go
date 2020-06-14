@@ -16,6 +16,9 @@ func main() {
 	port := ":8090"
 	fmt.Println("Serving at port ", port)
 	http.HandleFunc("/loads", func(w http.ResponseWriter, req *http.Request) {
+        // assumptions:
+        // - there are 5 containers
+        // - each container will be full when it contains 3 balls
 		c := models.Containers{1: 0, 2: 0, 3: 0, 4: 0, 5: 0}
 		full := c.Load()
 
