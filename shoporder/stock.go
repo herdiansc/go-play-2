@@ -17,7 +17,7 @@ func (s Stock) Order() (int, string, string) {
 	message := "order successfully created, please proceed to payment!"
 	if s.Total <= 0 {
 		status = "error"
-		message = "stock is not found!"
+		message = "Out of stock! Please access endpoint GET /orders/reset to reset the stock"
 	} else {
 		s.Total--
 	}
