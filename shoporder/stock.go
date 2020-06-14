@@ -1,4 +1,4 @@
-package models
+package shoporder
 
 type Stock struct {
 	Total int

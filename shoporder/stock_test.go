@@ -1,4 +1,4 @@
-package models
+package shoporder
 
 import "testing"
 
