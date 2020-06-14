@@ -9,8 +9,8 @@ import (
 
 // Response wraps response for tennis ball container model.
 type Response struct {
-    ListContainers   Containers `json:"listContainers"`
-    FullContainerNo  int        `json:"fullContainerNo"`
+	ListContainers  Containers `json:"listContainers"`
+	FullContainerNo int        `json:"fullContainerNo"`
 }
 
 // Containers contains balls.
