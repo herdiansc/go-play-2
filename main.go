@@ -3,9 +3,10 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	shopOrder "go-play-2/shoporder"
-	tenisBall "go-play-2/tenisball"
+	shopOrder "github.com/herdiansc/go-play-2/shoporder"
+	tenisBall "github.com/herdiansc/go-play-2/tenisball"
 	"net/http"
+    "os"
 )
 
 type Data interface{}
@@ -17,7 +18,8 @@ type BaseResponse struct {
 }
 
 func main() {
-	port := ":8090"
+    port := os.Getenv("PORT")
+	// port := ":8090"
 	fmt.Println("Serving on port", port)
 
 	http.HandleFunc("/loads", func(w http.ResponseWriter, req *http.Request) {
