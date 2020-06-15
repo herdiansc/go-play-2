@@ -18,7 +18,7 @@ type BaseResponse struct {
 }
 
 func main() {
-    port := os.Getenv("PORT")
+    port := os.Getenv("GO_PLAY_2_PORT")
 	// port := ":8090"
 	fmt.Println("Application is serving on port ", port)
 
