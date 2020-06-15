@@ -20,7 +20,7 @@ type BaseResponse struct {
 func main() {
     port := os.Getenv("PORT")
 	// port := ":8090"
-	fmt.Println("Serving on port", port)
+	fmt.Println("Application is serving on port ", port)
 
 	http.HandleFunc("/loads", func(w http.ResponseWriter, req *http.Request) {
 		// assumptions:
