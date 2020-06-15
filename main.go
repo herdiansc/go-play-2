@@ -18,9 +18,9 @@ type BaseResponse struct {
 }
 
 func main() {
-    port := os.Getenv("GO_PLAY_2_PORT")
-	// port := ":8090"
-	fmt.Println("Application is serving on port ", port)
+    port := os.Getenv("PORT")
+    host := "0.0.0.0:"+port
+	fmt.Println("Application is serving on ", host)
 
 	http.HandleFunc("/loads", func(w http.ResponseWriter, req *http.Request) {
 		// assumptions:
@@ -71,5 +71,5 @@ func main() {
 			Data:    nil,
 		})
 	})
-	http.ListenAndServe("0.0.0.0"+port, nil)
+	http.ListenAndServe(host, nil)
 }
