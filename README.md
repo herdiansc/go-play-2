@@ -7,6 +7,6 @@ This is an exploratory project of golang.
 
 ## How to Run
 - clone this repo
-- enter each project `tennis-ball|order-race-condition`
+- enter each project `tennisball|shoporder`
 - execute command `go run main.go`
 - execute command `go test ./...` to execute unit test
